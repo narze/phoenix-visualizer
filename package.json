@@ -1,0 +1,29 @@
+{
+  "name": "phoenix-visualizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha -r esm",
+    "test:watch": "mocha -r esm --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/narze/phoenix-visualizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narze/phoenix-visualizer/issues"
+  },
+  "homepage": "https://github.com/narze/phoenix-visualizer#readme"
+}
