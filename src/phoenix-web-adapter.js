@@ -126,6 +126,12 @@ export class PhoenixWeb {
     this.spaces.push(space)
     this.windows.push(window)
   }
+
+  static log() {
+    console.log("Screen count: ", this.screens.length)
+    console.log("Space count: ", this.spaces.length)
+    console.log("Window count: ", this.windows.length)
+  }
 }
 
 function uuidv4() {

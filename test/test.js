@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { PhoenixWeb, Screen, Space, Window } from '../phoenix-web-adapter'
+import { PhoenixWeb, Screen, Space, Window } from '../src/phoenix-web-adapter'
 
 describe('PhoenixWeb', () => {
   it('exists', () => {
