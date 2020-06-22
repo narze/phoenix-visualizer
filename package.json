@@ -19,6 +19,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
+    "build": "webpack",
     "test": "mocha -r esm",
     "test:watch": "mocha -r esm --watch"
   },
