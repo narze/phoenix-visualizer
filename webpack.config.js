@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -24,6 +25,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Phoenix Visualizer'
+    }),
     new webpack.ProvidePlugin({
       Window: [path.resolve(path.join(__dirname, 'src/phoenix-web-adapter.js')), "Window"],
       Key: [path.resolve(path.join(__dirname, 'src/phoenix-web-adapter.js')), "Key"],
