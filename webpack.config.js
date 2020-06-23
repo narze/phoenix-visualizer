@@ -25,9 +25,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Phoenix Visualizer'
-    }),
+    new HtmlWebpackPlugin(),
     new webpack.ProvidePlugin({
       Window: [path.resolve(path.join(__dirname, 'src/phoenix-web-adapter.js')), "Window"],
       Key: [path.resolve(path.join(__dirname, 'src/phoenix-web-adapter.js')), "Key"],
@@ -36,6 +34,7 @@ module.exports = {
       Space: [path.resolve(path.join(__dirname, 'src/phoenix-web-adapter.js')), "Space"],
       Screen: [path.resolve(path.join(__dirname, 'src/phoenix-web-adapter.js')), "Screen"],
       PhoenixWeb: [path.resolve(path.join(__dirname, 'src/phoenix-web-adapter.js')), "PhoenixWeb"],
+      Vue: ['vue/dist/vue.esm.js', 'default'],
     }),
   ],
 };

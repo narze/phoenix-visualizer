@@ -1,24 +1,36 @@
-import * as Phoenix from './phoenix.js'
+import './phoenix.js'
 
-function initButton() {
-  const element = document.createElement('button');
-  element.innerText = "Init()"
-  element.addEventListener("click", () => {
-    PhoenixWeb.init()
-  })
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Phoenix Visualizer',
+    screens: [],
+    spaces: [],
+    windows: [],
+  },
+  template: `
+    <div>
+      {{ message }}
+      <button @click="init">Init</button>
+      <button @click="log">Log</button>
 
-  return element;
-}
-
-function logButton() {
-  const element = document.createElement('button');
-  element.innerText = "log()"
-  element.addEventListener("click", () => {
-    PhoenixWeb.log()
-  })
-
-  return element;
-}
-
-document.body.appendChild(initButton());
-document.body.appendChild(logButton());
+      <div>Screens count : {{ screens.length }}</div>
+      <div>Spaces count : {{ spaces.length }}</div>
+      <div>Windows count : {{ windows.length }}</div>
+    </div>
+  `,
+  methods: {
+    init() {
+      PhoenixWeb.init()
+      this.updateData()
+    },
+    log() {
+      PhoenixWeb.log()
+    },
+    updateData() {
+      this.screens = PhoenixWeb.screens
+      this.spaces = PhoenixWeb.spaces
+      this.windows = PhoenixWeb.windows
+    },
+  },
+})
