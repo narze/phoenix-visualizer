@@ -6,9 +6,9 @@ function bsp(windows, offsetX, offsetY, width, height) {
   if (windows.length == 0) { return; }
   if (windows.length == 1) {
     // render full width
-    w = windows.shift()
+    const w = windows.shift()
 
-    frame = w.frame()
+    const frame = w.frame()
 
     frame.x = offsetX + GAP
     frame.y = offsetY + GAP
@@ -21,9 +21,9 @@ function bsp(windows, offsetX, offsetY, width, height) {
 
   if (width >= height) {
     // Landscape : Divide by width
-    w = windows.shift()
+    const w = windows.shift()
 
-    frame = w.frame()
+    const frame = w.frame()
 
     frame.x = offsetX + GAP
     frame.y = offsetY + GAP
@@ -34,9 +34,9 @@ function bsp(windows, offsetX, offsetY, width, height) {
     return bsp(windows, offsetX + (width / 2), offsetY, (width / 2), height)
   } else {
     // Portrait :: Divide by height
-    w = windows.shift()
+    const w = windows.shift()
 
-    frame = w.frame()
+    const frame = w.frame()
 
     frame.x = offsetX + GAP
     frame.y = offsetY + GAP
